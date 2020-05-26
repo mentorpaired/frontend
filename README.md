@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mentorpaired/frontend.svg)](https://travis-ci.org/mentorpaired/frontend)[![Coverage Status](https://coveralls.io/repos/github/mentorpaired/frontend/badge.svg)](https://coveralls.io/github/mentorpaired/frontend)
+[![Build Status](https://travis-ci.org/mentorpaired/frontend.svg)](https://travis-ci.org/mentorpaired/frontend) [![Coverage Status](https://coveralls.io/repos/github/mentorpaired/frontend/badge.svg)](https://coveralls.io/github/mentorpaired/frontend)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
