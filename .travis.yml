@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-- 'node'
+  - 'node'
 cache:
   directories:
     - 'node_modules'
-script: 'true'
+script:
+  - npm test
 notifications:
   slack:
     secure: W6BC+0obn6/s7S4i8y+Dyu5S9Gq2ApAa+cWCOmBjgf4nmpck8c49WyOrfHjSKf7gviy9Vj5r9/0uhSJK/soEvmZku8mM+H6Yz7fN02B2eG26Ams5dS739pGcPm0d2xI2PxMznaFYd1rNGqYQAX6MoG9I38BvUOKD4CfN/iclMHRznVeSac3KUqjwiRB8G4AWl/dX+fi6kCpWeN18XIKIA/Sw0h1UdO2I4n70jlr5iGm/QMdduTObOdsoEKv4n4bLxuaZDuQGRCiusuZJJlLRpsAD8IiQXc7ZMpTeZ5xUokoSXAALU9FlTI0ggeZ1/taFlyOXMx43N+Vpw4JD+39+yO45wg8ho0gcxINRwfXmNN1zA/v07DCF39Z1TCiR9B8wOh5DxMKDWuITh4frjAemppWKkr2h5+AmOJI0NkJUpn1nbSmkL9F7+MtCXvloWkzYvLiqDi02xA3jQMEelbe3Pl6UQkyAC/0DmTdN8iwdtveyMsMe6ZgnYb8elEzf6XxlSUDr3X29UuhlHWHZJm8e9xJQ+f/UFDJ24refIykIKdCbagIgG85pjovVg4W5eTdX8darqVfUWzk/VnkNY9QbfWYj0QjLKqe2gN6sO5dL9Z/XY70lJ5adbdw13HErUlfTeKhLq9JNfqvOdlHnn0CQQb65VFPNVTZm7EuWFTspQWk=
