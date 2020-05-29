@@ -27,6 +27,8 @@ node_modules
 bower_components
 package-lock.json
 build
+.coveralls.yml
+coverage/
 
 *.sublime*
 
