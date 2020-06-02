@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mentorpaired/frontend.svg)](https://travis-ci.org/mentorpaired/frontend) [![Coverage Status](https://coveralls.io/repos/github/mentorpaired/frontend/badge.svg?branch=3-cicdsetup)](https://coveralls.io/github/mentorpaired/frontend?branch=3-cicdsetup)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
