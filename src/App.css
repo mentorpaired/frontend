@@ -1,22 +1,19 @@
 .intro {
   width: 300px;
   height: 100px;
-  padding-left: 43px;
-  color: #eee;
+  color: #060553;
   font-style: normal;
+  text-align: center;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -90%);
 }
 
 .app_name {
   font-weight: bold;
   font-size: 30px;
   line-height: 45px;
-}
-
-.intro_text {
-  text-align: left;  
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 20px;
 }
 
 .centered_div {
@@ -30,7 +27,7 @@
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  border: 1px solid #00D4FF;
+  border: 1px solid #060553;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -39,13 +36,15 @@
   font-style: normal;
   align-items: center;
   text-align: center;
-  color: #eee;
+  color: #060553;
 }
 
-.sign_up_text, .log_in_text {
+.sign_up_text,
+.log_in_text {
   font-weight: 600;
   font-size: 25px;
   line-height: 33px;
+  margin-top: 15px;
 }
 
 .small_centered_div {
@@ -59,8 +58,7 @@
   transform: translate(-50%, -10%);
   text-align: center;
   font-style: normal;
-  color: #eee;
-
+  color: #060553;
 }
 
 .auth_links {
@@ -70,28 +68,31 @@
   text-align: center;
 }
 
-.gitlab_link, .github_link {
+.gitlab_link,
+.github_link {
   position: absolute;
   top: 10%;
   width: 320px;
   height: 35px;
   text-decoration: none;
   padding: 10px;
-  border: 1px solid #00D4FF;
-  color: #00D4FF;
+  border: 1px solid #060553;
+  color: #060553;
 }
 
 .gitlab_link {
   margin-top: 90px;
 }
 
-.fab_github, .fab_gitlab {
-  margin-right: 40px;
-  color: #eee;
+.fab_github,
+.fab_gitlab {
+  margin-right: 20px;
+  color: #060553;
 }
 
-.login_link, .signup_link {
+.login_link,
+.signup_link {
   text-decoration: none;
   padding-left: 5px;
-  color: #00D4FF;;
+  color: #060553;
 }
