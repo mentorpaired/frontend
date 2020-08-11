@@ -29,6 +29,7 @@ package-lock.json
 build
 .coveralls.yml
 coverage/
+.env
 
 *.sublime*
 
