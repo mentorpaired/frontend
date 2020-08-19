@@ -1,5 +1,6 @@
 import {
   LOADING,
+  AUTHENTICATED,
   GITHUB_LOGIN_SUCCESS,
   GITHUB_LOGIN_FAIL,
 } from "./actionTypes";
@@ -19,9 +20,20 @@ const githubAuthAction = (code) => {
       })
         .then((response) => response.json())
         .then((data) => {
+          localStorage.setItem("isLoggedIn", true);
+          localStorage.setItem("token", JSON.stringify(data.token));
+          localStorage.setItem("user", JSON.stringify(data.user));
+          dispatch({
+            type: AUTHENTICATED,
+            payload: { token: data.token, isAuthenticated: true },
+          });
           dispatch({
             type: GITHUB_LOGIN_SUCCESS,
-            payload: { user: data, isLoggedIn: true },
+            payload: {
+              isLoggedIn: true,
+              isAuthenticated: true,
+              user: data.user,
+            },
           });
         });
     } catch (error) {

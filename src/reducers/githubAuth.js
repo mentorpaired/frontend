@@ -1,5 +1,6 @@
 import {
   LOADING,
+  AUTHENTICATED,
   GITHUB_LOGIN_SUCCESS,
   GITHUB_LOGIN_FAIL,
   GITHUB_LOGOUT,
@@ -22,14 +23,16 @@ const githubAuth = (state = initialState, action) => {
         isLoading: true,
         isLoggedIn: false,
       };
-    case GITHUB_LOGIN_SUCCESS:
-      localStorage.setItem(
-        "isLoggedIn",
-        JSON.stringify(action.payload.isLoggedIn)
-      );
-      localStorage.setItem("user", JSON.stringify(action.payload.user));
+    case AUTHENTICATED:
       return {
         ...state,
+        isAuthenticated: true,
+        token: action.payload.token,
+      };
+    case GITHUB_LOGIN_SUCCESS:
+      return {
+        ...state,
+        isAuthenticated: true,
         isLoggedIn: action.payload.isLoggedIn,
         user: action.payload.user,
       };
