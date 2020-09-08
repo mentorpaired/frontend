@@ -1,16 +1,11 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import IntroductoryMessage from "./IntroductoryMessage";
 import AuthLinks from "../authlinks/AuthLinks";
 import githubAuthAction from "../actions/githubAuthAction";
 import { connect } from "react-redux";
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.checkLoggedInState();
-  }
-
   componentDidMount() {
     const hasCode = window.location.href.includes("?code=");
     if (hasCode) {
@@ -20,15 +15,9 @@ class Login extends Component {
     }
   }
 
-  checkLoggedInState() {
-    const { isLoggedIn } = this.props;
-    if (isLoggedIn) {
-      this.props.history.push("/");
-    }
-  }
-
   render() {
-    const { isLoading } = this.props;
+    const { isLoading, isAuthenticated } = this.props;
+    if (isAuthenticated) return <Redirect to="/" />;
     return (
       <div>
         <div>
@@ -55,12 +44,12 @@ class Login extends Component {
   }
 }
 
-const mapStateToProps = ({ githubAuth: { isLoading, isLoggedIn } }) => {
-  return { isLoading, isLoggedIn };
+const mapStateToProps = ({ githubAuth: { isLoading, isAuthenticated } }) => {
+  return { isLoading, isAuthenticated };
 };
 
 const mapDispatchToProps = (dispatch) => ({
   githubAuthAction: (code) => dispatch(githubAuthAction(code)),
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
