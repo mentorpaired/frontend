@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import Logout from "../actions/logOutAction";
 
 class Dashboard extends Component {
   render() {
     return (
       <div>
-        <button>Logout</button>
+        <Logout/>
       </div>
     );
   }
