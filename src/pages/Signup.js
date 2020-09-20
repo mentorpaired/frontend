@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import IntroductoryMessage from "./IntroductoryMessage";
+import AppName from "./AppName";
 import AuthLinks from "../authlinks/AuthLinks";
 
 const Signup = () => {
   return (
     <div>
       <div>
-        <IntroductoryMessage />
+        <AppName />
       </div>
 
       <div className="centered_div">
