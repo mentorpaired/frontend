@@ -6,8 +6,12 @@ class Profile extends Component {
   render() {
     return (
       <div className="profile_links_container">
-        <About />
-        <UserInformation />
+        <div>
+          <About />
+        </div>
+        <div>
+          <UserInformation />
+        </div>
       </div>
     );
   }
