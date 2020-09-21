@@ -4,7 +4,7 @@ class About extends Component {
   render() {
     return (
       <div className="about_container">
-        <p className="about_appname">MentorPaired</p>
+        <h1>MentorPaired</h1>
       </div>
     );
   }

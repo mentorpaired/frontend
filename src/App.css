@@ -98,7 +98,6 @@
   line-height: 60px;
   float: right;
   font-weight: 500;
-  font-style: normal;
 }
 
 .dashboard_link {
@@ -116,7 +115,7 @@
 }
 
 .about_container {
-  height: 900px;
+  height: 610px;
   color: #e5e5e5;
   background: linear-gradient(
     360deg,
@@ -126,11 +125,15 @@
   );
 }
 
-.about_appname {
+.about_container h1 {
   position: absolute;
   left: 3%;
-  font-style: normal;
   font-weight: bold;
   font-size: 30px;
   line-height: 50px;
+}
+
+.profile_links_container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
 }
