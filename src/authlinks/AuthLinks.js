@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../App.css";
+import "../pages/signup_login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faGitlab } from "@fortawesome/free-brands-svg-icons";
 

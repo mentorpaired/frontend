@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import "../signup_login.css";
 import { Link, Redirect } from "react-router-dom";
-import IntroductoryMessage from "./IntroductoryMessage";
-import AuthLinks from "../authlinks/AuthLinks";
-import githubAuthAction from "../actions/githubAuthAction";
+import AppName from "../appname/AppName";
+import AuthLinks from "../../authlinks/AuthLinks";
+import githubAuthAction from "../../actions/githubAuthAction";
 import { connect } from "react-redux";
 
 class Login extends Component {
@@ -21,7 +22,7 @@ class Login extends Component {
     return (
       <div>
         <div>
-          <IntroductoryMessage />
+          <AppName />
         </div>
 
         <div className="centered_div">
