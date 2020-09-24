@@ -1,11 +1,12 @@
 import React from "react";
+import "../signup_login.css";
 import { Link } from "react-router-dom";
 import AppName from "../appname/AppName";
 import AuthLinks from "../../authlinks/AuthLinks";
 
 const Signup = () => {
   return (
-    <div className="signup_container">
+    <div>
       <div>
         <AppName />
       </div>
@@ -19,7 +20,7 @@ const Signup = () => {
           </p>
         </div>
 
-        <div>
+        <div className="signup_authlinks">
           <AuthLinks />
         </div>
 

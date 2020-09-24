@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Login.css";
+import "../signup_login.css";
 import { Link, Redirect } from "react-router-dom";
 import AppName from "../appname/AppName";
 import AuthLinks from "../../authlinks/AuthLinks";
