@@ -1,14 +1,13 @@
 import React from "react";
-import "./App.css";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import About from "./pages/About";
-import UserInformation from "./pages/UserInformation";
-import Profile from "./pages/Profile";
+import Signup from "./pages/signup/Signup";
+import Login from "./pages/login/Login";
+import Dashboard from "./pages/dashboard/Dashboard";
+import About from "./pages/about/About";
+import UserInformation from "./pages/userinformation/UserInformation";
+import Profile from "./pages/profile/Profile";
 import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
