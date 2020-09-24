@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./AuthLinks.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faGitlab } from "@fortawesome/free-brands-svg-icons";
 
