@@ -1,7 +1,8 @@
 import React from "react";
+import "./Appname.css";
 
 const AppName = () => {
-  return <p className="appname">MentorPaired</p>;
+  return <div className="appname">MentorPaired</div>;
 };
 
 export default AppName;

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AppName from "./AppName";
-import AuthLinks from "../authlinks/AuthLinks";
+import AppName from "../appname/AppName";
+import AuthLinks from "../../authlinks/AuthLinks";
 
 const Signup = () => {
   return (
-    <div>
+    <div className="signup_container">
       <div>
         <AppName />
       </div>
@@ -19,7 +19,9 @@ const Signup = () => {
           </p>
         </div>
 
-        <AuthLinks />
+        <div>
+          <AuthLinks />
+        </div>
 
         <div className="small_centered_div">
           Already have an account?

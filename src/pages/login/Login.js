@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import "./Login.css";
 import { Link, Redirect } from "react-router-dom";
-import AppName from "./AppName";
-import AuthLinks from "../authlinks/AuthLinks";
-import githubAuthAction from "../actions/githubAuthAction";
+import AppName from "../appname/AppName";
+import AuthLinks from "../../authlinks/AuthLinks";
+import githubAuthAction from "../../actions/githubAuthAction";
 import { connect } from "react-redux";
 
 class Login extends Component {

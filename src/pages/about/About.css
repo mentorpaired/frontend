@@ -1,0 +1,21 @@
+.about_container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #e5e5e5;
+  background: linear-gradient(
+    360deg,
+    #020024 11.39%,
+    rgba(8, 8, 115, 0.709638) 93.3%,
+    rgba(9, 9, 121, 0.685897) 100%
+  );
+}
+
+.about_appname {
+  color: #e5e5e5;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 50px;
+}

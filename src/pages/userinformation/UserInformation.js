@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./UserInformation.css";
 import { Link } from "react-router-dom";
 
 class UserInformation extends Component {
