@@ -13,9 +13,74 @@
 
 .about_appname {
   color: #e5e5e5;
-  margin-left: 1rem;
+  margin-left: 2.5rem;
   margin-top: 1rem;
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
+}
+
+.image_name_location_container {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  background-color: #eeeeee;
+  border: 1px solid;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  align-items: inherit;
+}
+
+.name_location {
+  flex: 3;
+  margin-left: 2rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  font-style: normal;
+}
+
+.location p {
+  margin-left: 0.25rem;
+}
+
+.fa_location_icon {
+  margin-right: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.bio_container {
+  margin-left: 2.5rem;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 0.5rem;
+}
+
+.description {
+  border: 1px solid #00d4ff;
+  box-sizing: border-box;
+  align-items: left;
+  width: auto;
+  height: auto;
+}
+
+.description p {
+  margin-left: 0.75rem;
+  margin-top: 0.75rem;
 }
