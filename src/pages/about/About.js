@@ -11,8 +11,8 @@ class About extends Component {
   }
   render() {
     return (
-      {this.props.user.map(u => {
-        <div className="about_container" key={u.id}>
+      // {this.props.user.map(u => {
+      <div className="about_container" key={u.id}>
         <div className="about_appname">MentorPaired</div>
 
         <div className="image_name_location_container">
@@ -53,7 +53,7 @@ class About extends Component {
           </div>
         </div>
       </div>
-      })}
+      // })}
     );
   }
 }
