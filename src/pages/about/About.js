@@ -12,24 +12,24 @@ class About extends Component {
   render() {
     return (
       // {this.props.user.map(u => {
-      <div className="about_container" key={u.id}>
+      <div className="about_container">
         <div className="about_appname">MentorPaired</div>
 
         <div className="image_name_location_container">
           <div className="image">
             <FontAwesomeIcon icon={faCamera} size="2x" className="fa_camera" />
-            <img src={u.avatar} alt="user_avatar" />
+            <img src="#" alt="user_avatar" />
           </div>
 
           <div className="name_location">
-            <p className="name">{u.username}</p>
+            <p className="name">Delores Diei</p>
             <div className="location">
               <FontAwesomeIcon
                 icon={faMapMarkerAlt}
                 size="2x"
                 className="fa_location_icon"
               />
-              <p>{u.location}</p>
+              <p>Munich, Germany</p>
             </div>
           </div>
         </div>
