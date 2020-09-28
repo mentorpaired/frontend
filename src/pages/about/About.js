@@ -1,38 +1,35 @@
 import React, { Component } from "react";
 import "./About.css";
+import { connect } from "react-redux";
+import { loadUser } from "../../actions/aboutAction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 class About extends Component {
-  state = {
-    name: "",
-    avatar: "",
-    bio: "",
-  };
-
-  if(token) {
-    this.setState({ [event.target.name]: event.target.value });
+  componentDidMount() {
+    this.props.loadUser();
   }
   render() {
     return (
-      <div className="about_container">
+      {this.props.user.map(u => {
+        <div className="about_container" key={u.id}>
         <div className="about_appname">MentorPaired</div>
 
         <div className="image_name_location_container">
           <div className="image">
             <FontAwesomeIcon icon={faCamera} size="2x" className="fa_camera" />
-            <img src="#" alt="user_avatar" />
+            <img src={u.avatar} alt="user_avatar" />
           </div>
 
           <div className="name_location">
-            <p className="name">{this.state.name}</p>
+            <p className="name">{u.username}</p>
             <div className="location">
               <FontAwesomeIcon
                 icon={faMapMarkerAlt}
                 size="2x"
                 className="fa_location_icon"
               />
-              <p>Munich, Germany</p>
+              <p>{u.location}</p>
             </div>
           </div>
         </div>
@@ -56,8 +53,13 @@ class About extends Component {
           </div>
         </div>
       </div>
+      })}
     );
   }
 }
 
-export default About;
+const mapStateToProps = (state) => ({
+  user: state.aboutReducer.user,
+});
+
+export default connect(mapStateToProps, { loadUser })(About);
