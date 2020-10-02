@@ -10,7 +10,12 @@ import UserInformation from "./pages/userinformation/UserInformation";
 import Profile from "./pages/profile/Profile";
 import PrivateRoute from "./routes/PrivateRoute";
 
+import { getUserInfo } from "./actions/aboutAction";
+
 class App extends Component {
+  componentDidMount() {
+    store.dispatch(getUserInfo());
+  }
   render() {
     return (
       <Provider store={store}>
