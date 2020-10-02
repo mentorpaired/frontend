@@ -1,15 +1,34 @@
-import { LOAD_USER_INFO } from "../actions/actionTypes";
+import {
+  RETRIEVING_USER_INFO,
+  RETRIEVED_USER_INFO,
+  RETRIEVE_USER_INFO_ERROR,
+} from "../actions/actionTypes";
 
 const initialState = {
+  isLoading: false,
   user: [],
+  err: null,
 };
 
 const aboutReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOAD_USER_INFO:
+    case RETRIEVING_USER_INFO:
       return {
         ...state,
+        isLoading: true,
+      };
+    case RETRIEVED_USER_INFO:
+      return {
+        ...state,
+        isLoading: false,
         user: action.payload,
+      };
+    case RETRIEVE_USER_INFO_ERROR:
+      return {
+        ...state,
+        isLoading: null,
+        user: [],
+        err: action.payload.err,
       };
     default:
       return state;
