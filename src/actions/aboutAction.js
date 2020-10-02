@@ -8,7 +8,7 @@ import {
 const url = process.env.REACT_APP_BACKEND_PROXY_URL;
 
 // Retrieve user information from jwt access token
-export const getUserInfo = (user_id) => (dispatch, getState) => {
+export const getUserInfo = () => (dispatch, getState) => {
   dispatch({ type: RETRIEVING_USER_INFO });
 
   // get access token
@@ -27,7 +27,7 @@ export const getUserInfo = (user_id) => (dispatch, getState) => {
   }
 
   axios
-    .get(`${url}/users/${user_id}`, config)
+    .get(`${url}/users/`, config)
     .then((res) => {
       dispatch({
         type: RETRIEVED_USER_INFO,
