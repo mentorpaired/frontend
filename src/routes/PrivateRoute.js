@@ -7,7 +7,7 @@ const PrivateRoute = ({ component: Component, githubAuth, ...rest }) => (
     {...rest}
     render={(props) => {
       if (!githubAuth.isLoggedIn) {
-        return <Redirect to="/signup" />;
+        return <Redirect to="/login" />;
       } else {
         return <Component {...props} />;
       }

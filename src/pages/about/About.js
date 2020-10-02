@@ -12,41 +12,41 @@ class About extends Component {
   render() {
     return (
       <>
-        {this.props.user.map((u) => {
-          <div className="about_container">
-            <div className="about_appname">MentorPaired</div>
+        {/* {this.props.user.map((u) => ( */}
+        <div className="about_container">
+          <div className="about_appname">MentorPaired</div>
 
-            <div className="image_name_location_container">
-              <div className="image">
+          <div className="image_name_location_container">
+            <div className="image">
+              <FontAwesomeIcon
+                icon={faCamera}
+                size="2x"
+                className="fa_camera"
+              />
+              <img src="#" alt="user_avatar" />
+            </div>
+
+            <div className="name_location">
+              <p className="name">Display Name</p>
+              <div className="location">
                 <FontAwesomeIcon
-                  icon={faCamera}
+                  icon={faMapMarkerAlt}
                   size="2x"
-                  className="fa_camera"
+                  className="fa_location_icon"
                 />
-                <img src="#" alt="user_avatar" />
-              </div>
-
-              <div className="name_location">
-                <p className="name">{u.display_name}</p>
-                <div className="location">
-                  <FontAwesomeIcon
-                    icon={faMapMarkerAlt}
-                    size="2x"
-                    className="fa_location_icon"
-                  />
-                  <p>{u.timezone}</p>
-                </div>
+                <p>Location</p>
               </div>
             </div>
+          </div>
 
-            <div className="bio_container">
-              <p className="name">About {u.display_name}</p>
-              <div className="description">
-                <p>{u.about}</p>
-              </div>
+          <div className="bio_container">
+            <p className="name">About Display Name</p>
+            <div className="description">
+              <p>Bio</p>
             </div>
-          </div>;
-        })}
+          </div>
+        </div>
+        ))}
       </>
     );
   }

@@ -22,16 +22,21 @@ const githubAuthAction = (code) => {
         .then((data) => {
           localStorage.setItem("isLoggedIn", true);
           localStorage.setItem("token", JSON.stringify(data.token));
+          localStorage.setItem("jwt", JSON.stringify(data.jwt));
           localStorage.setItem("user", JSON.stringify(data.user));
           dispatch({
             type: AUTHENTICATED,
-            payload: { token: data.token, isAuthenticated: true },
+            payload: {
+              isLoading: false,
+              isAuthenticated: true,
+              token: data.token,
+            },
           });
           dispatch({
             type: GITHUB_LOGIN_SUCCESS,
             payload: {
               isLoggedIn: true,
-              isAuthenticated: true,
+              jwt: data.jwt,
               user: data.user,
             },
           });
