@@ -15,9 +15,11 @@ class Logout extends Component {
             return <Redirect to="/signup" push={true} />
         }
         return (
+
             <div>
                 <button type='button' onClick={this.props.logout}>Log Out</button>
             </div>
+
         );
     }
 }
