@@ -17,6 +17,9 @@
     "@testing-library/user-event": "^7.1.2",
     "@ungap/url-search-params": "0.2.2",
     "axios": "0.20.0",
+    "expect": "26.5.0",
+    "fetch-mock": "9.10.7",
+    "node-fetch": "2.6.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "7.2.0",
@@ -31,9 +34,22 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false --coverage --collectCoverageFrom=!**/serviceWorker.js",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "test": "jest --watchAll=false --coverage",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "testconfig.js",
+      "package.json",
+      "package-lock.json",
+      "yarn.lock",
+      "serviceWorker.js"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,6 +67,8 @@
     ]
   },
   "devDependencies": {
-    "coveralls": "3.1.0"
+    "@babel/preset-env": "7.11.5",
+    "coveralls": "3.1.0",
+    "redux-mock-store": "1.5.4"
   }
 }
