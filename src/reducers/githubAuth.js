@@ -11,6 +11,7 @@ const initialState = {
   isAuthenticated: false,
   isLoggedIn: JSON.parse(localStorage.getItem("isLoggedIn")) || false,
   token: JSON.parse(localStorage.getItem("token")) || null,
+  jwt: JSON.parse(localStorage.getItem("jwt")) || null,
   user: JSON.parse(localStorage.getItem("user")) || null,
   err: null,
 };
@@ -26,14 +27,15 @@ const githubAuth = (state = initialState, action) => {
     case AUTHENTICATED:
       return {
         ...state,
+        isLoading: false,
         isAuthenticated: true,
         token: action.payload.token,
       };
     case GITHUB_LOGIN_SUCCESS:
       return {
         ...state,
-        isAuthenticated: true,
         isLoggedIn: action.payload.isLoggedIn,
+        jwt: action.payload.jwt,
         user: action.payload.user,
       };
     case GITHUB_LOGIN_FAIL:
