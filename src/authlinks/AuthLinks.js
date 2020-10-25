@@ -3,8 +3,10 @@ import "../pages/signup_login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faGitlab } from "@fortawesome/free-brands-svg-icons";
 
-const client_id = process.env.REACT_APP_GITHUB_CLIENT_ID;
-const redirect_uri = process.env.REACT_APP_GITHUB_REDIRECT_URI;
+const client_id = process.env.REACT_APP_CLIENT_ID;
+const redirect_uri = process.env.REACT_APP_REDIRECT_URI;
+
+console.log('ENVS: ', process.env);
 
 class AuthLinks extends Component {
   render() {

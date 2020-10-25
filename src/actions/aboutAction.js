@@ -12,7 +12,7 @@ export const getUserInfo = () => (dispatch, getState) => {
   dispatch({ type: RETRIEVING_USER_INFO });
 
   // get access token
-  const jwt = getState().githubAuth.jwt.access;
+  const jwt = getState().githubAuth.jwt;
 
   // Headers
   const config = {
@@ -23,7 +23,7 @@ export const getUserInfo = () => (dispatch, getState) => {
 
   // if jwt, add to headers config
   if (jwt) {
-    config.headers["Authorization"] = `Bearer ${jwt}`;
+    config.headers["Authorization"] = `Bearer ${jwt.access}`;
   }
 
   axios
