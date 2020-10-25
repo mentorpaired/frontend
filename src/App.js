@@ -9,7 +9,7 @@ import About from "./pages/about/About";
 import UserInformation from "./pages/userinformation/UserInformation";
 import Profile from "./pages/profile/Profile";
 import PrivateRoute from "./routes/PrivateRoute";
-
+import Logout from "./components/Logout";
 import { getUserInfo } from "./actions/aboutAction";
 
 class App extends Component {
