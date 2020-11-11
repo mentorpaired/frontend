@@ -1,14 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class App extends Component {
-
-  render() {
-    return (
-    <React.Fragment>
-      
-    </React.Fragment>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<h1>~Hola mundo!</h1>
+			</div>
+		);
+	}
 }
 
 export default App;
