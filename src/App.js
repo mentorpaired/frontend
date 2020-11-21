@@ -1,21 +1,16 @@
 import React, { Component } from "react";
-import { Link, Route, BrowserRouter, Switch } from "react-router-dom";
-import Test from "./Test";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
+import DashboardPage from "./pages/DashboardPage";
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
-          <ul>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          </ul>
           <Switch>
-            <Route path="/login" component={Test} />
+            <Route exact path="/" component={DashboardPage} />
+            <Route path="/profile" component={DashboardPage} />
+            <Route path="/messages" component={DashboardPage} />
           </Switch>
-        </div>
       </BrowserRouter>
     );
   }
