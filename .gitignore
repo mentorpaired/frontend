@@ -1,41 +1,23 @@
-# Created by https://www.gitignore.io/api/react,linux
-# Edit at https://www.gitignore.io/?templates=react,linux
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-### Linux ###
-*~
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
+# testing
+/coverage
 
-# KDE directory preferences
-.directory
+# production
+/build
 
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# .nfs files are created when an open file is removed but is still being accessed
-.nfs*
-
-### react ###
-.DS_*
-*.log
-logs
-**/*.backup.*
-**/*.back.*
-.env
-
-node_modules
-bower_components
-package-lock.json
-build
-.coveralls.yml
-coverage/
-.env
-
-*.sublime*
-
-psd
-thumb
-sketch
-
-# End of https://www.gitignore.io/api/react,linux
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
