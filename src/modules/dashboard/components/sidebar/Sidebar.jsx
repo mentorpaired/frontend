@@ -8,7 +8,6 @@ import MessageIcon from '../sidebar-icons/MessageIcon';
 
 
 const Sidebar = (props) => {
-  console.log(props, "props")
   return (
     <div className="sidebar">
       <div className="sidebar-header">
@@ -20,17 +19,17 @@ const Sidebar = (props) => {
       </div>
       <div className="sidebar-body ps">
         <ul className="nav">
-          <li className="nav-item">
+          <li className={`nav-item ${props.match.url === "/" ? "nav-item-active" : ""}`}>
             <Link to="/">
               <DashboardIcon active={props.match.url === "/" ? true : false}/>
             </Link>
           </li>
-          <li className="nav-item">
+          <li className={`nav-item ${props.match.url === "/profile" ? "nav-item-active" : ""}`}>
             <Link to="/profile">
               <ProfileIcon active={props.match.url === "/profile" ? true : false}/>
             </Link>
           </li>
-          <li className="nav-item">
+          <li className={`nav-item ${props.match.url === "/messages" ? "nav-item-active" : ""}`}>
             <Link to="/messages">
               <MessageIcon active={props.match.url === "/messages" ? true : false}/>
             </Link>

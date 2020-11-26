@@ -114,6 +114,11 @@ svg {
     /* border: 1px solid black; */
     /* margin: auto; */
     margin: 30px auto;
+    width: 240px;
+
+}
+.nav-item-active{
+    border-right: 5px solid #03A5FF !important;
 }
 
 
