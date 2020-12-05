@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage";
@@ -17,3 +18,6 @@ class App extends Component {
 }
 
 export default App;
+=======
+import React, { Component } from "react";import "./modules/sign/components/Signin"import Signin from "./modules/sign/components/Signin";class App extends Component {  render() {    return (      <div>        <Signin/>      </div>    );  }}export default App;
+>>>>>>> second commit
