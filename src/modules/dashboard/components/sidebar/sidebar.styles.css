@@ -28,6 +28,12 @@ svg {
     background-color: #fff;
 }
 
+@media screen and (max-width:760px){
+    .sidebar{
+        width: 200px !important;
+        border: 1px solid red !important;
+    }
+}
 .sidebar-header {
     background: #fff;
     height: 64px;

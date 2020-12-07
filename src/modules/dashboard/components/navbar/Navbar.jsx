@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 import "./navbar.styles.css"
 import { ReactComponent as BellLogo} from "../../../../assets/svg/bell.svg"
 import UserImage from "../../../../assets/image/mheader.png"
 
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className="navbar">
-      <ul className="header-nav">
+      <ul className={`header-nav  ${props.match.url === "/profile" ? "hide-nav" : ""}`}>
         <li className="header-nav-item">
           <Link to="#" className="active"> Requests</Link>
           <span className="span-active">24</span>
@@ -38,4 +38,4 @@ const Navbar = () => {
   );
 }
 
-export default Navbar;
+export default withRouter(Navbar);

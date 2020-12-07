@@ -38,6 +38,9 @@
     list-style: none;
     justify-content: flex-start;
 }
+.hide-nav{
+    visibility: hidden;
+}
 
 .header-nav-item {
     margin: auto 0px auto 0px;
