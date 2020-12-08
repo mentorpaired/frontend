@@ -35,6 +35,7 @@ const Sidebar = (props) => {
             </Link>
           </li>
         </ul>
+        <button class="btn-req">Request a mentor</button>
       </div>
     </div>
   );

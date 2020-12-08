@@ -2,7 +2,7 @@ ol,
 ul,
 dl {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 svg {
@@ -138,8 +138,8 @@ svg {
 } */
 
 .sidebar .sidebar-body .nav .nav-item .nav-link .link-title {
-    margin-left: 0.8rem;
-    font-size: 1rem;
+    margin-left: 12.8px;
+    font-size: 16px;
     font-weight: 400;
     transition: all 0.2s ease-in-out;
 }
