@@ -1,1 +1,41 @@
-import React from "react";import Logo from "../icons/logo"import AmazonLogo from "../icons/amazonlogo";import AirbnbLogo from "../icons/airbnblogo";import UberLogo from "../icons/uberlogo";import MicrosoftLogo from "../icons/microsoftlogo";import NetflixLogo from "../icons/netflixlogo";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faGithub, faGitlab } from "@fortawesome/free-brands-svg-icons";import "./Signin.css";const signin = () => {  return (    <div>    <div>      <Logo className="svg_logo"/>    </div>  <div className="centered_div">    <div className="mid_centered_div">      <p className="sign_in_text">Sign In</p>      <p className="more_text">        You are one step away from connecting with the mentor or mentee of        your dreams      </p>    </div>  </div>      <div className="github_auth_links" aria-hidden="true">        <a href="#" className="github_link">          <FontAwesomeIcon icon={faGithub} size="2x" className="fab_github" />          &nbsp; Continue with Github        </a>      </div>      <br />      <div className="gitlab_auth_links" aria-hidden="true">        <a href="#" className="gitlab_link">          <FontAwesomeIcon icon={faGitlab} size="2x" className="fab_gitlab" />          &nbsp; Continue with Gitlab        </a>      </div>      <div className="bottom_div">        <p className="bottom_text">          Trusted by Tech Companies around the world        </p>      </div>      <div>        <AmazonLogo className="svg_amazon"/> <AirbnbLogo className="svg_airbnb"/> <UberLogo className="svg_uber"/>        <NetflixLogo className="svg_netflix"/> <MicrosoftLogo className="svg_microsoft"/>      </div>  </div>)};export default signin;
+import React from "react";
+import Logo from "../icons/logo"
+import AmazonLogo from "../icons/amazonlogo";
+import AirbnbLogo from "../icons/airbnblogo";
+import UberLogo from "../icons/uberlogo";
+import MicrosoftLogo from "../icons/mslogo";
+import NetflixLogo from "../icons/netflixlogo";
+import GitSignIn from "./gitSignIn";
+import "./Signin.css";
+
+const SignIn = () => {
+  return (
+    <div>
+    <div>
+      <Logo className="svg_logo"/>
+    </div>
+  <div className="centered_div">
+    <div className="mid_centered_div">
+      <p className="sign_in_text">Sign In</p>
+      <p className="more_text">
+        You are one step away from connecting with the mentor or mentee of
+        your dreams
+      </p>
+    </div>
+  </div>
+        <GitSignIn/>
+
+      <div className="bottom_div">
+        <p className="bottom_text">
+          Trusted by Tech Companies around the world
+        </p>
+      </div>
+      <div>
+        <AmazonLogo className="svg_amazon"/> <AirbnbLogo className="svg_airbnb"/> <UberLogo className="svg_uber"/>
+        <NetflixLogo className="svg_netflix"/> <MicrosoftLogo className="svg_microsoft"/>
+
+      </div>
+  </div>
+)};
+
+export default SignIn;

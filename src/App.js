@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage";
+import SignIn from "./modules/sign/components/Signin";
 
 class App extends Component {
   render() {
@@ -11,6 +11,7 @@ class App extends Component {
             <Route exact path="/" component={DashboardPage} />
             <Route path="/profile" component={DashboardPage} />
             <Route path="/messages" component={DashboardPage} />
+            <Route path="/signin" component={SignIn} />
           </Switch>
       </BrowserRouter>
     );
@@ -18,6 +19,3 @@ class App extends Component {
 }
 
 export default App;
-=======
-import React, { Component } from "react";import "./modules/sign/components/Signin"import Signin from "./modules/sign/components/Signin";class App extends Component {  render() {    return (      <div>        <Signin/>      </div>    );  }}export default App;
->>>>>>> second commit
