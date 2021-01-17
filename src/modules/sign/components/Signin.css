@@ -1,0 +1,127 @@
+.svg_logo{
+  display: flex;
+  margin: auto;
+  position: absolute;
+  width: 211px;
+  height: 33px;
+  left: 144px;
+  top: 40px;
+
+}
+.centered_div {
+  position: absolute;
+  width: 29rem;
+  height: 28rem;
+  top: 45%;
+  left: 53%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.mid_centered_div {
+  padding: 2rem;
+  font-style: normal;
+  align-items: center;
+  text-align: center;
+  color: #060553;
+  width: 22rem;
+}
+.sign_in_text {
+  font-family: Inter, serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  margin-top: 1rem;
+  color: #37464F;
+}
+.more_text{
+  font-family: Inter, serif;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #37464F;
+}
+
+.bottom_div {
+  position: absolute;
+  width: 349px;
+  left: 35rem;
+  top: 34rem;
+}
+.bottom_text {
+  font-family: Inter, serif;
+  line-height: 19px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #37464F;
+}
+.svg_amazon {
+  position: absolute;
+  width: 100px;
+  height: 38px;
+  left: 27rem;
+  top: 745px;
+}
+.svg_airbnb {
+  position: absolute;
+  width: 100px;
+  height: 45px;
+  left: 34rem;
+  top: 740px;
+}
+.svg_uber {
+  position: absolute;
+  width: 100px;
+  height: 21px;
+  left: 40rem;
+  top: 750px;
+}
+.svg_netflix {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  left: 45rem;
+  top: 752px;
+}
+.svg_microsoft {
+  position: absolute;
+  width: 110px;
+  height: 32px;
+  left: 52rem;
+  top: 745px;
+}
+.button {
+  background: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 360px;
+  height: 82px;
+  left: 539px;
+  top: 351px;
+  box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.button2{
+  background: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 360px;
+  height: 82px;
+  left: 539px;
+  top: 463px;
+  box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.button-text {
+  margin-left: 0.5rem;
+}
+.git {
+  position: absolute;
+  top: 16rem;
+  left: 34rem;
+}
+
