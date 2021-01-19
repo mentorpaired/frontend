@@ -1,1 +1,14 @@
-.app {  width: 300px;  height: 100px;  color: #060553;  font-style: normal;  font-weight: 600;  font-size: 30px;  line-height: 45px;  text-align: left;  position: absolute;  top: 16.5%;  left: 50%;  transform: translate(-50%, -90%);}
+.app {
+  width: 300px;
+  height: 100px;
+  color: #060553;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: left;
+  position: absolute;
+  top: 16.5%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
