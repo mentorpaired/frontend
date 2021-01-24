@@ -1,4 +1,4 @@
-.svg_logo{
+.svg_logo {
   display: flex;
   margin: auto;
   position: absolute;
@@ -6,7 +6,6 @@
   height: 33px;
   left: 144px;
   top: 40px;
-
 }
 .centered_div {
   position: absolute;
@@ -34,14 +33,14 @@
   font-size: 24px;
   line-height: 33px;
   margin-top: 1rem;
-  color: #37464F;
+  color: #37464f;
 }
-.more_text{
+.more_text {
   font-family: Inter, serif;
   line-height: 22px;
   font-size: 16px;
   font-weight: 500;
-  color: #37464F;
+  color: #37464f;
 }
 
 .bottom_div {
@@ -55,7 +54,7 @@
   line-height: 19px;
   font-size: 16px;
   font-weight: 500;
-  color: #37464F;
+  color: #37464f;
 }
 .svg_amazon {
   position: absolute;
@@ -104,7 +103,7 @@
   top: 351px;
   box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.15);
 }
-.button2{
+.button2 {
   background: #fff;
   padding: 1rem 2rem;
   border: none;
@@ -124,4 +123,3 @@
   top: 16rem;
   left: 34rem;
 }
-
