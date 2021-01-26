@@ -6,9 +6,6 @@ import Navbar from '../modules/dashboard/components/navbar/Navbar';
 import Profile from '../modules/dashboard/components/Profile';
 import Sidebar from '../modules/dashboard/components/sidebar/Sidebar';
 
-
-
-
 const DashboardPage = () => {
   return (
     <div className="main-wrapper">
