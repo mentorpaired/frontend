@@ -9,10 +9,10 @@ function GitSignIn() {
   const [gitlabActive, gitlabSetActive] = useState(false);
   const githubActiveStyles = githubActive ? {border: "1px solid black"} : {};
   const gitlabActiveStyles = gitlabActive ? {border: "1px solid black"} : {};
-  const mouseOverGithub = () => {githubSetActive(true);}
-  const mouseOverGitlab = () => {gitlabSetActive(true);}
-  const mouseOutGithub = () => {githubSetActive(false);}
-  const mouseOutGitlab = () => {gitlabSetActive(false);}
+  const mouseOverGithub = () => githubSetActive(true);
+  const mouseOverGitlab = () => gitlabSetActive(true);
+  const mouseOutGithub = () => githubSetActive(false);
+  const mouseOutGitlab = () => gitlabSetActive(false);
   return (
     <div className="git">
       <button style={githubActiveStyles} className="github-button" onMouseOver={mouseOverGithub} onMouseOut={mouseOutGithub}>
