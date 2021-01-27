@@ -16,12 +16,12 @@ function GitSignIn() {
   return (
     <div className="git">
       <button style={githubActiveStyles} className="github-button" onMouseOver={mouseOverGithub} onMouseOut={mouseOutGithub}>
-        <img src={githubActive ? activateGithub : github} alt="github button" />
+        <img src={githubActive ? activateGithub : github} alt="github" />
         <span className="button-text">Continue with GitHub</span>
       </button>
       <br/>
       <button style={gitlabActiveStyles} className="gitlab-button" onMouseOver={mouseOverGitlab} onMouseOut={mouseOutGitlab}>
-        <img src={gitlabActive ? activateGitlab : gitlab} alt="gitlab button" />
+        <img src={gitlabActive ? activateGitlab : gitlab} alt="gitlab" />
         <span className="button-text">Continue with Gitlab</span>
       </button>
     </div>
