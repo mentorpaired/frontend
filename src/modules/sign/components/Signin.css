@@ -75,6 +75,10 @@
   height: 3.5rem;
   box-shadow: 0 1rem 4rem 0rem rgba(0, 0, 0, 0.15);
 }
+.github-button:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
 .gitlab-button {
   background: #fff;
   padding: 1rem 2rem;
@@ -84,6 +88,10 @@
   width: 15rem;
   height: 3.5rem;
   box-shadow: 0 1rem 4rem 0rem rgba(0, 0, 0, 0.15);
+}
+.gitlab-button:hover {
+  border: 1px solid black;
+  cursor: pointer;
 }
 .button-text {
   margin-left: 0.5rem;
