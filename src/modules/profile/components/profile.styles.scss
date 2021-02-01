@@ -1,0 +1,285 @@
+// Variables
+
+$primaryColor: #03a5ff;
+$bg-color: #fff;
+$primaryText: #37464f;
+$secondaryText: #5f6b72;
+$borderColor: rgba(1, 1, 1, 0.15);
+
+@mixin btnStyles {
+	filter: drop-shadow(0 4px 16px rgba(1, 1, 1, 0.2));
+	width: 2rem;
+	height: 2rem;
+	margin-left: 1rem;
+	cursor: pointer;
+}
+
+.profile-container {
+	display: flex;
+	background: $bg-color;
+	margin: 0 auto;
+	width: 97%;
+	height: 100%;
+}
+
+.user-info {
+	width: 25%;
+	padding: 2rem 0.5rem 0;
+	border-right: 0.03rem solid $borderColor;
+	&--pic-container {
+		position: relative;
+		// border: #03a5ff 2px solid;
+	}
+	&--edit-btn {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 25%;
+		border: 0;
+		background: rgba(1, 1, 1, 0);
+		filter: drop-shadow(0 4px 16px rgba(1, 1, 1, 0.2));
+	}
+	&--pic {
+		display: block;
+		margin: 0 auto;
+		border-radius: 50%;
+		width: 6rem;
+		height: 6rem;
+	}
+	&--online {
+		position: absolute;
+		bottom: 0;
+		right: 30%;
+		background: $primaryColor;
+		width: 1.25rem;
+		height: 1.25rem;
+		border: 0.25em solid #fff;
+		border-radius: 50%;
+	}
+	&--name {
+		text-align: center;
+		margin-top: 0.4rem;
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: $primaryText;
+	}
+	&--map-marker {
+		margin-right: 0.3rem;
+		font-size: 0.9rem;
+	}
+	&--address {
+		display: block;
+		margin-top: 0.5rem;
+		font-size: 1rem;
+		text-align: center;
+		color: $secondaryText;
+		text-decoration: none;
+		&-text {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&--rating {
+		margin: 1rem auto 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&-number {
+			font-size: 1.2rem;
+			color: $primaryText;
+			margin-right: 0.3rem;
+		}
+		&-stars {
+			color: $primaryColor;
+			margin-right: 0.3rem;
+		}
+		&-votes {
+			font-size: 0.8rem;
+			color: $secondaryText;
+		}
+	}
+	&--mentor-button {
+		display: block;
+		margin: 3rem auto 0;
+		border: 0;
+		border-radius: 0.1rem;
+		box-shadow: 0 4px 16px 0 rgba(1, 1, 1, 0.08);
+		background: $bg-color;
+		color: $primaryColor;
+		width: 90%;
+		padding: 1rem 0;
+	}
+}
+
+.user-description {
+	width: 75%;
+	color: $primaryText;
+
+	&--header {
+		display: flex;
+		align-items: center;
+	}
+
+	&--title {
+		font-size: 1.25rem;
+		font-weight: bold;
+	}
+	&--subtitle {
+		font-size: 1.05rem;
+		font-weight: 600;
+		margin-bottom: 0.4rem;
+	}
+	&--paragraph {
+		font-size: 1rem;
+	}
+	&--section {
+		padding: 2.5rem 2rem 1.5rem;
+		border-bottom: 0.03rem solid $borderColor;
+	}
+	&--aboutme {
+		&--edit-btn {
+			@include btnStyles();
+		}
+	}
+	&--goals {
+		&--header {
+			display: flex;
+			align-items: center;
+		}
+
+		&--add-icon {
+			@include btnStyles();
+		}
+	}
+	&--goal {
+		margin-bottom: 1em;
+		display: flex;
+		align-items: center;
+		&-edit-btn {
+			padding: 0;
+			margin: 0;
+			border: 0;
+			background: rgba(1, 1, 1, 0);
+			&--icon {
+				@include btnStyles();
+			}
+		}
+	}
+	&--goal + &--goal {
+		// background: blue;
+		padding-top: 1em;
+		border-top: 0.03em solid $borderColor;
+	}
+	&--reviews {
+		&-header {
+			display: flex;
+			align-items: center;
+		}
+		&-filter-icon {
+			@include btnStyles();
+		}
+		&--filter {
+			position: relative;
+			display: inline-block;
+			&-dropdown {
+				width: 210px;
+				position: absolute;
+				z-index: 1;
+				background: white;
+				padding: 1em 0.8em;
+				border-radius: 0.1rem;
+				box-shadow: 0 4px 16px 0 rgba(1, 1, 1, 0.15);
+				&-button {
+					display: flex;
+					align-items: center;
+					width: 100%;
+					border: none;
+					background: rgba(1, 1, 1, 0);
+					margin-bottom: 1rem;
+					text-align: left;
+					&-check {
+						width: 30%;
+					}
+					&-text {
+						width: 60%;
+					}
+				}
+				&-button:last-child {
+					margin: 0;
+				}
+			}
+			&:hover &-dropdown {
+				display: block;
+			}
+		}
+	}
+	&--review {
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 1em;
+		&-profile-link {
+			width: 27%;
+			margin-right: 1.1rem;
+		}
+		&-pic {
+			border-radius: 50%;
+		}
+		&-heading {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 0.5em;
+		}
+		&-name {
+			font-size: 0.875rem;
+			font-weight: 600;
+			color: $primaryText;
+		}
+		&-rating {
+			display: flex;
+			margin-left: auto;
+			margin-right: 1em;
+			&-stars {
+				color: $primaryColor;
+				font-size: 0.75rem;
+			}
+			&-number {
+				margin-left: 0.3em;
+				font-size: 0.75rem;
+				color: $primaryText;
+			}
+		}
+		&-date {
+			font-size: 0.75rem;
+			color: $secondaryText;
+		}
+		&-comment {
+			font-size: 0.875rem;
+			color: $primaryText;
+		}
+	}
+	&--review + &--review {
+		// background: blue;
+		padding-top: 1em;
+		border-top: 0.03em solid $borderColor;
+	}
+	&--rating {
+		margin: 0;
+		justify-content: flex-start;
+		margin-bottom: 1.3em;
+		& .user-info--rating-number {
+			font-size: 1.5rem;
+		}
+		& .user-info--rating-votes {
+			margin-top: 0.15em;
+			font-size: 0.875rem;
+		}
+
+		& .user-info--rating-stars {
+			font-size: 1.2rem;
+			margin-right: 0.4em;
+		}
+	}
+}
