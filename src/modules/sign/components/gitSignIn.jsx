@@ -15,10 +15,15 @@ function GitSignIn() {
   const mouseOutGitlab = () => gitlabSetActive(false);
   return (
     <div className="git">
-      <button style={githubActiveStyles} className="github-button" onMouseOver={mouseOverGithub} onMouseOut={mouseOutGithub}>
+      <a
+        href={`https://github.com/login/oauth/authorize?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&scope=user`}
+        id="button"
+        style={githubActiveStyles}
+        className="button"
+      >
         <img src={githubActive ? activateGithub : github} alt="" />
         <span className="button-text">Continue with GitHub</span>
-      </button>
+      </a>
       <br/>
       <button style={gitlabActiveStyles} className="gitlab-button" onMouseOver={mouseOverGitlab} onMouseOut={mouseOutGitlab}>
         <img src={gitlabActive ? activateGitlab : gitlab} alt="" />
