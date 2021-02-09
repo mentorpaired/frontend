@@ -16,6 +16,13 @@ const reducer = (state, { type, payload }) => {
     case "LOGIN_FAILED":
       return { ...state, user: {}, error: payload, loading: false };
 
+    case "GITLAB_AUTH":
+      localStorage.setItem('auth', "gitlab")
+      return { ...state, isGitlabAuth: true }
+    
+    case "CLEAR_GITLAB_AUTH":
+      localStorage.setItem('auth', "github")
+      return { ...state, isGitlabAuth: false }
     default:
       return state
   }
@@ -25,7 +32,8 @@ const initialState = {
   loggedIn: localStorage.getItem("loggedIn"),
   user: {},
   loading: false,
-  error: ""
+  error: "",
+  isGitlabAuth: false
 };
 
 export const StateContext = createContext(initialState)
