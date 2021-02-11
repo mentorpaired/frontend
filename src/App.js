@@ -4,6 +4,7 @@ import DashboardPage from "./pages/DashboardPage";
 import SignIn from "./modules/sign/components/Signin";
 import { createContext } from "react"
 import { useReducer} from "react"
+import { SetGitHubAuth, setGitLabAuth } from "./utils/misc.utils";
 
 const reducer = (state, { type, payload }) => {
   switch (type) {
@@ -17,12 +18,10 @@ const reducer = (state, { type, payload }) => {
       return { ...state, user: {}, error: payload, loading: false };
 
     case "GITLAB_AUTH":
-      localStorage.setItem('auth', "gitlab")
-      return { ...state, isGitlabAuth: true }
+      return { ...state, isGitlabAuth: setGitLabAuth() }
     
     case "CLEAR_GITLAB_AUTH":
-      localStorage.setItem('auth', "github")
-      return { ...state, isGitlabAuth: false }
+      return { ...state, isGitlabAuth: SetGitHubAuth() }
     default:
       return state
   }

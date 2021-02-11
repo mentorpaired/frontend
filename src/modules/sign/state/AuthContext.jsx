@@ -23,7 +23,7 @@ const reducer = (state, { type, payload }) => {
   }
 };
 
-function GitHubLogInContextProvider(props) {
+function AuthContext(props) {
   const [logInState, logInDispatch] = useReducer(reducer, initialState);
 
   return (
@@ -35,4 +35,4 @@ function GitHubLogInContextProvider(props) {
   );
 }
 
-export default GitHubLogInContextProvider;
+export default AuthContext;
