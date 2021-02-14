@@ -1,9 +1,15 @@
 import React from 'react';
+import DashboardCard from './dashboard-card/DashboardCard';
 
 
 const Dashboard = () => {
   return (
-    <h1>Dashboard</h1>
+    <div className="dashboard-card-container">
+      <DashboardCard/>
+      <DashboardCard/>
+      <DashboardCard/>
+      <DashboardCard/>
+    </div>
   );
 }
 
