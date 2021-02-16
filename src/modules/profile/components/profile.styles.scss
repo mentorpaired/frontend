@@ -53,7 +53,7 @@ $borderColor: rgba(1, 1, 1, 0.15);
 		background: $primaryColor;
 		width: 1.25rem;
 		height: 1.25rem;
-		border: 0.25em solid #fff;
+		border: 0.25rem solid #fff;
 		border-radius: 50%;
 	}
 	&--name {
@@ -154,7 +154,7 @@ $borderColor: rgba(1, 1, 1, 0.15);
 		}
 	}
 	&--goal {
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 		display: flex;
 		align-items: center;
 		&-edit-btn {
@@ -169,8 +169,8 @@ $borderColor: rgba(1, 1, 1, 0.15);
 	}
 	&--goal + &--goal {
 		// background: blue;
-		padding-top: 1em;
-		border-top: 0.03em solid $borderColor;
+		padding-top: 1rem;
+		border-top: 0.03rem solid $borderColor;
 	}
 	&--reviews {
 		&-header {
@@ -184,11 +184,11 @@ $borderColor: rgba(1, 1, 1, 0.15);
 			position: relative;
 			display: inline-block;
 			&-dropdown {
-				width: 210px;
+				width: 13.125rem;
 				position: absolute;
 				z-index: 1;
 				background: white;
-				padding: 1em 0.8em;
+				padding: 1rem 0.8rem;
 				border-radius: 0.1rem;
 				box-shadow: 0 4px 16px 0 rgba(1, 1, 1, 0.15);
 				&-button {
@@ -218,7 +218,7 @@ $borderColor: rgba(1, 1, 1, 0.15);
 	&--review {
 		display: flex;
 		align-items: flex-start;
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 		&-profile-link {
 			width: 27%;
 			margin-right: 1.1rem;
@@ -230,7 +230,7 @@ $borderColor: rgba(1, 1, 1, 0.15);
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			margin-bottom: 0.5em;
+			margin-bottom: 0.5rem;
 		}
 		&-name {
 			font-size: 0.875rem;
@@ -240,13 +240,13 @@ $borderColor: rgba(1, 1, 1, 0.15);
 		&-rating {
 			display: flex;
 			margin-left: auto;
-			margin-right: 1em;
+			margin-right: 1rem;
 			&-stars {
 				color: $primaryColor;
 				font-size: 0.75rem;
 			}
 			&-number {
-				margin-left: 0.3em;
+				margin-left: 0.3rem;
 				font-size: 0.75rem;
 				color: $primaryText;
 			}
@@ -262,24 +262,24 @@ $borderColor: rgba(1, 1, 1, 0.15);
 	}
 	&--review + &--review {
 		// background: blue;
-		padding-top: 1em;
-		border-top: 0.03em solid $borderColor;
+		padding-top: 1rem;
+		border-top: 0.03rem solid $borderColor;
 	}
 	&--rating {
 		margin: 0;
 		justify-content: flex-start;
-		margin-bottom: 1.3em;
+		margin-bottom: 1.3rem;
 		& .user-info--rating-number {
 			font-size: 1.5rem;
 		}
 		& .user-info--rating-votes {
-			margin-top: 0.15em;
+			margin-top: 0.15rem;
 			font-size: 0.875rem;
 		}
 
 		& .user-info--rating-stars {
 			font-size: 1.2rem;
-			margin-right: 0.4em;
+			margin-right: 0.4rem;
 		}
 	}
 }
