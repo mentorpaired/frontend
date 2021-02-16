@@ -1,0 +1,7 @@
+@mixin btnStyles {
+	filter: drop-shadow(0 4px 16px rgba(1, 1, 1, 0.2));
+	width: 2rem;
+	height: 2rem;
+	margin-left: 1rem;
+	cursor: pointer;
+}

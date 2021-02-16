@@ -1,0 +1,19 @@
+.user-info--rating {
+	margin: 1rem auto 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&-number {
+		font-size: 1.2rem;
+		color: $primaryText;
+		margin-right: 0.3rem;
+	}
+	&-stars {
+		color: $primaryColor;
+		margin-right: 0.3rem;
+	}
+	&-votes {
+		font-size: 0.8rem;
+		color: $secondaryText;
+	}
+}

@@ -1,117 +1,6 @@
-// Variables
-
-$primaryColor: #03a5ff;
-$bg-color: #fff;
-$primaryText: #37464f;
-$secondaryText: #5f6b72;
-$borderColor: rgba(1, 1, 1, 0.15);
-
-@mixin btnStyles {
-	filter: drop-shadow(0 4px 16px rgba(1, 1, 1, 0.2));
-	width: 2rem;
-	height: 2rem;
-	margin-left: 1rem;
-	cursor: pointer;
-}
-
-.profile-container {
-	display: flex;
-	background: $bg-color;
-	margin: 0 auto;
-	width: 97%;
-	height: 100%;
-}
-
-.user-info {
-	width: 25%;
-	padding: 2rem 0.5rem 0;
-	border-right: 0.03rem solid $borderColor;
-	&--pic-container {
-		position: relative;
-		// border: #03a5ff 2px solid;
-	}
-	&--edit-btn {
-		position: absolute;
-		display: block;
-		top: 0;
-		left: 25%;
-		border: 0;
-		background: rgba(1, 1, 1, 0);
-		filter: drop-shadow(0 4px 16px rgba(1, 1, 1, 0.2));
-	}
-	&--pic {
-		display: block;
-		margin: 0 auto;
-		border-radius: 50%;
-		width: 6rem;
-		height: 6rem;
-	}
-	&--online {
-		position: absolute;
-		bottom: 0;
-		right: 30%;
-		background: $primaryColor;
-		width: 1.25rem;
-		height: 1.25rem;
-		border: 0.25rem solid #fff;
-		border-radius: 50%;
-	}
-	&--name {
-		text-align: center;
-		margin-top: 0.4rem;
-		font-size: 1.2rem;
-		font-weight: 500;
-		color: $primaryText;
-	}
-	&--map-marker {
-		margin-right: 0.3rem;
-		font-size: 0.9rem;
-	}
-	&--address {
-		display: block;
-		margin-top: 0.5rem;
-		font-size: 1rem;
-		text-align: center;
-		color: $secondaryText;
-		text-decoration: none;
-		&-text {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-	}
-
-	&--rating {
-		margin: 1rem auto 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		&-number {
-			font-size: 1.2rem;
-			color: $primaryText;
-			margin-right: 0.3rem;
-		}
-		&-stars {
-			color: $primaryColor;
-			margin-right: 0.3rem;
-		}
-		&-votes {
-			font-size: 0.8rem;
-			color: $secondaryText;
-		}
-	}
-	&--mentor-button {
-		display: block;
-		margin: 3rem auto 0;
-		border: 0;
-		border-radius: 0.1rem;
-		box-shadow: 0 4px 16px 0 rgba(1, 1, 1, 0.08);
-		background: $bg-color;
-		color: $primaryColor;
-		width: 90%;
-		padding: 1rem 0;
-	}
-}
+@import 'variables';
+@import 'btn_styles';
+@import 'rating';
 
 .user-description {
 	width: 75%;
@@ -120,6 +9,9 @@ $borderColor: rgba(1, 1, 1, 0.15);
 	&--header {
 		display: flex;
 		align-items: center;
+		&-wrapper {
+			display: flex;
+		}
 	}
 
 	&--title {
@@ -129,6 +21,7 @@ $borderColor: rgba(1, 1, 1, 0.15);
 	&--subtitle {
 		font-size: 1.05rem;
 		font-weight: 600;
+		margin-top: 0.5rem;
 		margin-bottom: 0.4rem;
 	}
 	&--paragraph {
@@ -137,6 +30,9 @@ $borderColor: rgba(1, 1, 1, 0.15);
 	&--section {
 		padding: 2.5rem 2rem 1.5rem;
 		border-bottom: 0.03rem solid $borderColor;
+	}
+	&--button {
+		display: none;
 	}
 	&--aboutme {
 		&--edit-btn {
@@ -265,8 +161,8 @@ $borderColor: rgba(1, 1, 1, 0.15);
 		padding-top: 1rem;
 		border-top: 0.03rem solid $borderColor;
 	}
-	&--rating {
-		margin: 0;
+	&--rating#rating-container {
+		margin: 1rem 0 0 1rem;
 		justify-content: flex-start;
 		margin-bottom: 1.3rem;
 		& .user-info--rating-number {
