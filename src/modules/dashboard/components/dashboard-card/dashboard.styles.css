@@ -1,13 +1,13 @@
 .dashboard-card-container {
     /* border: 1px solid red; */
     height: 100%;
-    margin: 20px;
+    margin: 1.25rem;
 
 }
 
 .dashboard-card-container .card-container {
     /* border: 1px solid blue; */
-    height: 135px;
+    height: 8.438rem;
     background-color: #fff;
     margin-bottom: 30px;
 }
@@ -17,8 +17,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    padding-left: 20px;
+    padding: 0.625rem;
+    padding-left: 1.25rem;
 }
 
 .dashboard-card-container .card-container .card-header .left-header{
@@ -38,8 +38,8 @@
 .dashboard-card-container .card-container .card-content {
     /* border: 1px solid red; */
     display: flex;
-    padding: 10px;
-    padding-left: 20px;
+    padding: 0.625rem;
+    padding-left: 1.25rem;
 }
 
 .dashboard-card-container .card-container .card-text {
@@ -60,10 +60,10 @@
 .dashboard-card-container .card-container .card-btn .action-btn {
     border: none;
     outline: none;
-    height: 41px;
-    width: 102px;
+    height: 2.563rem;
+    width: 6.375rem;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -71,7 +71,7 @@
     border: 2px solid #FF5B03;
     color: #FF5B03;
     background-color: #fff;
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 .dashboard-card-container .card-container .card-btn .accept {
