@@ -13,7 +13,7 @@ const LogInContainer = (props) => {
         const url = window.location.href;
         if (url.includes("code")) {
             const token = url.slice(url.indexOf("=") + 1);
-            const isGitlab = localStorage.auth === "gitlab"
+            const isGitlab = url.includes("gitlab")
             logIn(token, dispatch, history, isGitlab);
             }
     }, []);

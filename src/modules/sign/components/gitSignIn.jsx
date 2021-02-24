@@ -19,7 +19,7 @@ function GitSignIn() {
       <br/>
       <a 
         className="gitlab-button" 
-        href={`https://gitlab.com/oauth/authorize?client_id=${process.env.REACT_APP_GITLAB_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_GITLAB_REDIRECT_URI}&response_type=code&scope=read_user+profile`}
+        href={`https://gitlab.com/oauth/authorize?client_id=${process.env.REACT_APP_GITLAB_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_GITLAB_REDIRECT_URI}&response_type=code&scope=read_user+profile&state=gitlab`}
         onClick={() => dispatch({ type: "GITLAB_AUTH" })}
       >
         <img src={gitlab} alt="" />
