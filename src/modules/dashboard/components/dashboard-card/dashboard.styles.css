@@ -1,0 +1,80 @@
+.dashboard-card-container {
+    /* border: 1px solid red; */
+    height: 100%;
+    margin: 1.25rem;
+
+}
+
+.dashboard-card-container .card-container {
+    /* border: 1px solid blue; */
+    height: 8.438rem;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.dashboard-card-container .card-container .card-header{
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+    padding-left: 1.25rem;
+}
+
+.dashboard-card-container .card-container .card-header .left-header{
+    /* border: 1px solid green; */
+}
+.dashboard-card-container .card-container .card-header .left-header span {
+    font-weight: initial;
+}
+.dashboard-card-container .card-container .card-header .left-header h3,
+.dashboard-card-container .card-container .card-header .right-header p {
+    font-weight: lighter;
+}
+.dashboard-card-container .card-container .card-header .right-header {
+    /* border: 1px solid red; */
+}
+
+.dashboard-card-container .card-container .card-content {
+    /* border: 1px solid red; */
+    display: flex;
+    padding: 0.625rem;
+    padding-left: 1.25rem;
+}
+
+.dashboard-card-container .card-container .card-text {
+    border: 1px solid #fff;
+    flex: 2;
+}
+.dashboard-card-container .card-container .card-text p {
+    /* font-weight: 500; */
+}
+.dashboard-card-container .card-container .card-btn {
+    /* border: 1px solid black; */
+    /* flex: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-card-container .card-container .card-btn .action-btn {
+    border: none;
+    outline: none;
+    height: 2.563rem;
+    width: 6.375rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.dashboard-card-container .card-container .card-btn .decline {
+    border: 2px solid #FF5B03;
+    color: #FF5B03;
+    background-color: #fff;
+    margin-right: 1.25rem;
+}
+
+.dashboard-card-container .card-container .card-btn .accept {
+    color: #fff;
+    background-color: #00B279;
+}
