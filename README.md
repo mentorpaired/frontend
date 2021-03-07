@@ -1,3 +1,5 @@
+[![MentorPaired Frontend CI](https://github.com/mentorpaired/frontend/actions/workflows/node.js.yml/badge.svg)](https://github.com/mentorpaired/frontend/actions/workflows/node.js.yml) [![Coverage Status](https://coveralls.io/repos/github/mentorpaired/frontend/badge.svg)](https://coveralls.io/github/mentorpaired/frontend)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
