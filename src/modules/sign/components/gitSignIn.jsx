@@ -1,29 +1,32 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import github from "../../../../src/assets/svg/github.svg";
-import activateGithub from "../../../../src/assets/svg/githubActive.svg";
 import gitlab from "../../../../src/assets/svg/gitlab.svg";
-import activateGitlab from "../../../../src/assets/svg/gitlabActive.svg";
+import { StateContext } from "../../../App";
 
 function GitSignIn() {
-  const [githubActive, githubSetActive] = useState(false);
-  const [gitlabActive, gitlabSetActive] = useState(false);
-  const mouseOverGithub = () => githubSetActive(true);
-  const mouseOverGitlab = () => gitlabSetActive(true);
-  const mouseOutGithub = () => githubSetActive(false);
-  const mouseOutGitlab = () => gitlabSetActive(false);
-
+  const { dispatch } = useContext(StateContext);
   return (
     <div className="git">
-      <button className="github-button" onMouseOver={mouseOverGithub} onMouseOut={mouseOutGithub}>
-        <img src={githubActive ? activateGithub : github} alt="github" />
+      <a
+        href={`https://github.com/login/oauth/authorize?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&scope=user`}
+        id="button"
+        className="button"
+        onClick={() => dispatch({ type: "CLEAR_GITLAB_AUTH"})}
+      >
+        <img src={github} alt="" />
         <span className="button-text">Continue with GitHub</span>
-      </button>
+      </a>
       <br/>
-      <button className="gitlab-button" onMouseOver={mouseOverGitlab} onMouseOut={mouseOutGitlab}>
-        <img src={gitlabActive ? activateGitlab : gitlab} alt="gitlab" />
+      <a 
+        className="gitlab-button" 
+        href={`https://gitlab.com/oauth/authorize?client_id=${process.env.REACT_APP_GITLAB_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_GITLAB_REDIRECT_URI}&response_type=code&scope=read_user+profile&state=gitlab`}
+        onClick={() => dispatch({ type: "GITLAB_AUTH" })}
+      >
+        <img src={gitlab} alt="" />
         <span className="button-text">Continue with Gitlab</span>
-      </button>
+      </a>
     </div>
   );
 }
 export default GitSignIn;
+

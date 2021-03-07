@@ -5,8 +5,8 @@ import AirbnbLogo from "../icons/airbnblogo";
 import UberLogo from "../icons/uberlogo";
 import MicrosoftLogo from "../icons/mslogo";
 import NetflixLogo from "../icons/netflixlogo";
-import GitSignIn from "./gitSignIn";
 import "./Signin.css";
+import LogInContainer from "../containers/LoginContainer";
 
 const SignIn = () => {
   return (
@@ -23,8 +23,7 @@ const SignIn = () => {
         </p>
       </div>
 
-      <GitSignIn/>
-
+      <LogInContainer/>
       <p className="bottom_text">
         Trusted by Tech Companies around the world
       </p>
