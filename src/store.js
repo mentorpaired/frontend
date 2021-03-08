@@ -3,7 +3,7 @@ import { createContext } from 'react';
 export const reducer = (state, { type, payload }) => {
 	switch (type) {
 		case 'LOGIN':
-			return { ...state, loading: true };
+			return { ...state, loading: true /*user:{}*/ };
 
 		case 'LOGIN_SUCESS':
 			return {

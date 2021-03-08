@@ -10,6 +10,7 @@ export const logIn = async function (token, dispatch, history, isGitlab) {
 			{ code: token }
 		);
 		authorizeUser(response, dispatch);
+
 		history.push('/');
 	} catch (error) {
 		localStorage.setItem('loggedIn', false);
