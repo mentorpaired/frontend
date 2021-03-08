@@ -4,6 +4,7 @@ import DashboardPage from "./pages/DashboardPage";
 import SignIn from "./modules/sign/components/Signin";
 import { createContext } from "react"
 import { useReducer} from "react"
+import PrivateRoute from "./modules/shared/components/PrivateRoute";
 
 
 const reducer = (state, { type, payload }) => {
@@ -39,9 +40,9 @@ function App() {
       <StateContext.Provider value={{ state: state, dispatch: dispatch }}>
         <BrowserRouter>
             <Switch>
-              <Route exact path="/" component={DashboardPage} />
-              <Route path="/profile" component={DashboardPage} />
-              <Route path="/messages" component={DashboardPage} />
+              <PrivateRoute exact path="/" component={DashboardPage} />
+              <PrivateRoute path="/profile" component={DashboardPage} />
+              <PrivateRoute path="/messages" component={DashboardPage} />
               <Route path="/signin" component={SignIn} />
             </Switch>
         </BrowserRouter>
