@@ -1,8 +1,27 @@
 import { createContext } from 'react';
 
-export const UserContext = createContext();
+export const reducer = (state, { type, payload }) => {
+	switch (type) {
+		case 'LOGIN':
+			return { ...state, loading: true /*user:{}*/ };
 
+		case 'LOGIN_SUCESS':
+			return {
+				...state,
+				user: payload,
+				loading: false,
+				loggedIn: localStorage.getItem('loggedIn') === 'true',
+			};
+
+		case 'LOGIN_FAILED':
+			return { ...state, user: {}, error: payload, loading: false };
+
+		default:
+			return state;
+	}
+};
 export const initialState = {
+	loggedIn: localStorage.getItem('loggedIn') === 'true',
 	user: {
 		online: true,
 		name: 'Miguel Cervantes',
@@ -60,11 +79,9 @@ export const initialState = {
 			},
 		],
 	},
+	loading: false,
+	error: '',
+	isGitlabAuth: false,
 };
 
-export const reducer = (state, { type, payload }) => {
-	switch (type) {
-		default:
-			return state;
-	}
-};
+export const StateContext = createContext(initialState);
