@@ -10,7 +10,8 @@ const LogInContainer = (props) => {
 	useEffect(() => {
 		const url = window.location.href;
 		if (url.includes('code')) {
-			const token = url.slice(url.indexOf('=') + 1);
+			let token = url.slice(url.indexOf('=') + 1);
+            token = token.includes("&state=gitlab") ? token.replace("&state=gitlab","") : token
 			const isGitlab = url.includes('gitlab');
 			logIn(token, dispatch, history, isGitlab);
 		}

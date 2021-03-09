@@ -5,7 +5,7 @@ import AirbnbLogo from '../icons/airbnblogo';
 import UberLogo from '../icons/uberlogo';
 import MicrosoftLogo from '../icons/mslogo';
 import NetflixLogo from '../icons/netflixlogo';
-import './SignIn.css';
+import './Signin.css';
 import LogInContainer from '../containers/LoginContainer';
 
 const SignIn = () => {

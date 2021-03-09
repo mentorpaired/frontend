@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import DashboardPage from './pages/DashboardPage';
-import SignIn from './modules/sign/components/SignIn';
+import SignIn from "./modules/sign/components/Signin"
 import { useReducer } from 'react';
 import PrivateRoute from './modules/shared/components/PrivateRoute';
 import { reducer, initialState, StateContext } from './store';
