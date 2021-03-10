@@ -10,8 +10,9 @@ export const logIn = async function (token, dispatch, history, isGitlab) {
 			{ code: token }
 		);
 		authorizeUser(response, dispatch);
-
-		history.push('/');
+		//Commented out the history.push because it wasn't working as expected
+		// history.push('/');
+		window.location.href = "/"
 	} catch (error) {
 		localStorage.setItem('loggedIn', false);
 		dispatch({ type: 'LOGIN_FAILED', payload: error });
