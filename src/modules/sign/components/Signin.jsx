@@ -24,7 +24,7 @@ const SignIn = () => {
 			</div>
 
 			<LogInContainer />
-			<p className='bottom_text'>Trusted by Tech Companies around the world</p>
+			<p style={{fontFamily: "sans-serif"}} className='bottom_text'>Trusted by Tech Companies around the world</p>
 
 			<div className='logo_div'>
 				<AmazonLogo className='svg_amazon brand_logo' />
