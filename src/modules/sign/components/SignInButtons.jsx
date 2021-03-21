@@ -8,7 +8,7 @@ function GitSignIn() {
 	return (
 		<div className='git'>
 			<a
-				href={`https://github.com/login/oauth/authorize?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&scope=user`}
+				href={`https://github.com/login/oauth/authorize?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_GITLAB_REDIRECT_URI}&scope=user`}
 				id='button'
 				className='button'
 				onClick={() => dispatch({ type: 'CLEAR_GITLAB_AUTH' })}>
