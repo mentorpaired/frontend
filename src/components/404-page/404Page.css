@@ -1,0 +1,43 @@
+.notfound-container {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f7f8fa;
+}
+
+.notfound-container h1 {
+    margin: auto;
+    margin-bottom: 0;
+    font-family: sans-serif;
+    /* color:  #03A5FF; */
+}
+
+.notfound-img{
+    /* border: 1px solid blue; */
+    margin: auto;
+    width: 70%;
+    height: 70%;
+}
+
+@media screen and (max-width:800px){
+    .notfound-img{
+        /* border: 1px solid blue; */
+        width: 100%;
+        height: 100%;
+    }
+    .notfound-img img {
+        width:auto ;
+        height: auto;
+    }
+    
+}
+
+.notfound-img img {
+    width:100% ;
+    height: 100%;
+}
+
+
