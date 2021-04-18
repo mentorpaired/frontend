@@ -17,6 +17,7 @@ const Sidebar = (props) => {
 				</div>
 			</div>
 			<div className='sidebar-body ps'>
+				<div className="flex-container">
 				<ul className='nav'>
 					<li
 						className={`nav-item ${
@@ -48,6 +49,7 @@ const Sidebar = (props) => {
 					</li>
 				</ul>
 				<button className='btn-req'>Request a mentor</button>
+				</div>
 			</div>
 		</div>
 	);
