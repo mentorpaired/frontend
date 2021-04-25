@@ -34,3 +34,4 @@ const AboutMeModal = ({ hideModal, aboutme }) => {
 }
 
 export default AboutMeModal;
+

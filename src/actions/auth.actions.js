@@ -58,3 +58,4 @@ export const updateUserAboutInfo = async (id, dispatch, data) => {
 		console.log("ERROR: ", err)
 	}
 }
+

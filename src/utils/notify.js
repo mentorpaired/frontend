@@ -20,3 +20,4 @@ const notify = (message, style) => {
 
 
 export default notify
+

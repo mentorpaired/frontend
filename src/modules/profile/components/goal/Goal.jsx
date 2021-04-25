@@ -32,3 +32,4 @@ const Goal = ({ goal }) => {
 }
 
 export default Goal;
+
