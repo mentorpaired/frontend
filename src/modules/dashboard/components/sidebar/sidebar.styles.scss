@@ -112,14 +112,17 @@ svg {
 	padding-left: 0;
 	margin-bottom: 0;
 	list-style: none;
+	flex: 1;
 	/* border: 1px solid green; */
 }
 
 .sidebar .sidebar-body .nav .nav-item {
 	/* position: relative; */
-	/* border: 1px solid black; */
+	// border: 1px solid black;
+	display: flex;
+	align-items: center;
 	/* margin: auto; */
-	margin: 30px auto;
+	// margin: 30px auto;
 	width: 240px;
 }
 .nav-item-active {
@@ -134,6 +137,14 @@ svg {
   white-space: nowrap;
   color: inherit;
 } */
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	// border: 1px solid red;
+	height: 100%;
+	width: 100%;
+}
 
 .sidebar .sidebar-body .nav .nav-item .nav-link .link-title {
 	margin-left: 12.8px;

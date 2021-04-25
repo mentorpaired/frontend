@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { StateContext } from "../../../store";
+import AboutMeModal from "./modals/AboutMeModal";
 
-function AboutMe({ position, aboutme }) {
+function AboutMe() {
+  const { state } = useContext(StateContext)
+  const [visible, setVisible] = useState(false)
+	const makeModalVisible = () => {
+		setVisible(true)
+	}
+	const hideModal = () => {
+		setVisible(false)
+	}
   return (
+  <React.Fragment>
+    { visible ? 
+    (<AboutMeModal aboutme={state.user.about} hideModal={hideModal}/>) : null
+  }
     <div className="user-description--aboutme user-description--section">
       <div className="user-description--header">
         <h2 className="user-description--title">About me</h2>
@@ -12,6 +26,7 @@ function AboutMe({ position, aboutme }) {
           className={"user-description--aboutme--edit-btn"}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={makeModalVisible}
         >
           <circle cx="16" cy="16" r="16" fill="white" />
           <path
@@ -23,9 +38,10 @@ function AboutMe({ position, aboutme }) {
         </svg>
       </div>
       <button className="user-description--button"></button>
-      <p className="user-description--subtitle">{position}</p>
-      <p className="user-description--paragraph">{aboutme}</p>
+      <p className="user-description--subtitle">Junior Frontend Developer</p>
+      <p className="user-description--paragraph">{state.user.about}</p>
     </div>
+  </React.Fragment>
   );
 }
 

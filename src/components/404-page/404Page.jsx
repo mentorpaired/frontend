@@ -9,7 +9,7 @@ const NotFoundPage = () => {
         <div className="notfound-container">
             <h1>The page you are looking for is not available.</h1>
             <div className="notfound-img">
-                <img src={NotFoundImg} alt="mentorpaired 404 image"/>
+                <img src={NotFoundImg} alt="mentorpaired 404"/>
             </div>
         </div>
     );

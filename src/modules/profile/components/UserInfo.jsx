@@ -1,13 +1,14 @@
-import React from 'react';
-import profileImg from '../../../assets/image/profile-pic.jpg';
+import React, { useContext } from 'react';
 import MentorButton from './MentorButton';
 import Rating from './Rating';
 import editIcon from '../../../assets/svg/edit-btn.svg';
 import locationIcon from '../../../assets/svg/location.svg';
 import './user_info.scss';
+import { StateContext } from '../../../store';
 
-function UserInfo({ user }) {
-	const gMapsAddress = user.address.replace(',', '').replace(' ', '+');
+function UserInfo() {
+	const { state: {user}} = useContext(StateContext)
+	// const gMapsAddress = user.address.replace(',', '').replace(' ', '+');
 
 	return (
 		<div className='user-info'>
@@ -15,12 +16,12 @@ function UserInfo({ user }) {
 				<button className='user-info--edit-btn'>
 					<img src={editIcon} className={'user-info--edit-btn-icon'} alt='' />
 				</button>
-				<img src={profileImg} className='user-info--pic' alt='User profile' />
-				{user.online && <div className={'user-info--online'} />}
+				<img src={user.avatar} className='user-info--pic' alt='User profile' />
+				<div className={'user-info--online'} />
 			</div>
-			<h2 className='user-info--name'>{user.name}</h2>
+			<h2 className='user-info--name'>{user?.username}</h2>
 			<a
-				href={`https://www.google.com/maps/place/${gMapsAddress}/`}
+				href={`https://www.google.com/maps/place/${null}/`}
 				target={'_blank'}
 				rel='noreferrer'
 				className='user-info--address'>
@@ -30,10 +31,10 @@ function UserInfo({ user }) {
 						src={locationIcon}
 						alt='Location pin'
 					/>
-					{user.address}
+					Munich, Dominicana
 				</div>
 			</a>
-			<Rating rating={user.rating} section={'user-info'} votes={user.votes} />
+			<Rating rating="5.0" section={'user-info'} votes="20" />
 			<MentorButton />
 		</div>
 	);

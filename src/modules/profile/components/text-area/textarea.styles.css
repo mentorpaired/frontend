@@ -1,0 +1,14 @@
+.textarea-wrapper {
+    width: 100%;
+}
+
+.mr {
+    margin-right: 0.625rem;
+}
+.textarea-wrapper textarea {
+    width: 100%;
+    border-radius: 10px;
+    border:1px solid #aaa;
+    padding: 0.625rem;
+}
+
