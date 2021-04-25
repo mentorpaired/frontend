@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import './navbar.styles.css';
 import { ReactComponent as BellLogo } from '../../../../assets/svg/bell.svg';
-import UserImage from '../../../../assets/image/mheader.png';
+import { StateContext } from '../../../../store';
+import { fetchUserInfo } from '../../../../actions/auth.actions';
+import jwt_decode from "jwt-decode";
 
 const Navbar = (props) => {
+	const { dispatch, state } = useContext(StateContext)
+	const { user_id } = jwt_decode(localStorage.access_token)
+	useEffect(() => {
+		fetchUserInfo(user_id, dispatch)
+	},[]) 
+	const { user } = state
 	return (
 		<div className='navbar'>
 			<ul
@@ -39,9 +47,9 @@ const Navbar = (props) => {
 					<div className='space'></div>
 				</div>
 				<div className='profile'>
-					<p>Damola Chinedu</p>
+					<p>{user.username}</p>
 					<div className='profile-img'>
-						<img src={UserImage} alt='' />
+						<img src={user.avatar} alt='' />
 					</div>
 				</div>
 			</div>

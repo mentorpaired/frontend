@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import RatingComments from './RatingComments';
-import filterIcon from '../../../assets/svg/filter-btn.svg';
-import DropdownButton from './DropdownButton';
 import Dropdown from './Dropdown';
+import { StateContext } from '../../../store';
 
-function Reviews({ reviews, children }) {
+function Reviews({ children }) {
 	const [dropdownDisplay, setDropdownDisplay] = useState(true);
-
+	const { state } = useContext(StateContext)
 	function handleClick() {
 		console.log('Clicked');
 		setDropdownDisplay(!dropdownDisplay);
@@ -24,7 +23,7 @@ function Reviews({ reviews, children }) {
 				<button className='user-description--button'></button>
 				{children}
 			</div>
-			{reviews.map((review) => (
+			{state.reviews.map((review) => (
 				<div key={review.name} className='user-description--review'>
 					<a
 						href={review.profileLink}

@@ -6,6 +6,26 @@ import { useReducer } from 'react';
 import PrivateRoute from './modules/shared/components/PrivateRoute';
 import { reducer, initialState, StateContext } from './store';
 import NotFoundPage from './components/404-page/404Page';
+import { setAuthToken } from './utils/misc.utils';
+import jwt_decode from "jwt-decode";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from 'axios';
+
+if (localStorage.access_token) {
+	// Set auth token header auth
+	setAuthToken(localStorage.access_token);
+	// Decode token and get user info and exp
+	const decoded = jwt_decode(localStorage.access_token);
+	//checks if the access token is expired to refresh it
+	const currentTime = Date.now() / 1000;
+	if (decoded.exp < currentTime) {
+		axios.post("http://mentorpaired-staging-backend.herokuapp.com/api/token/refresh/", {
+			refresh: localStorage.refresh_token
+		})
+	}
+}
+
 
 function App() {
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -20,6 +40,7 @@ function App() {
 					<Route component={NotFoundPage}/>
 				</Switch>
 			</BrowserRouter>
+			<ToastContainer />
 		</StateContext.Provider>
 	);
 }

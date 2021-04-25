@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import editIcon from "../../../assets/svg/edit-btn.svg";
 import addIcon from "../../../assets/svg/add-btn.svg";
+import { StateContext } from "../../../store";
+import Goal from "./goal/Goal";
 
-function Goals({ goals }) {
+function Goals() {
+  const { state } = useContext(StateContext)
   return (
     <div className="user-description--goals user-description--section">
       <div className="user-description--goals--header">
@@ -14,23 +17,9 @@ function Goals({ goals }) {
         />
       </div>
       <button className="user-description--button"></button>
-      {goals.map((goal) => (
-        <div
-          key={goal.title.toLowerCase().replace(" ", "-")}
-          className="user-description--goal"
-        >
-          <div className="user-description--goal-text">
-            <p className="user-description--subtitle">{goal.title}</p>
-            <p className="user-description--paragraph">{goal.description}</p>
-          </div>
-          <button className="user-description--goal-edit-btn">
-            <img
-              src={editIcon}
-              className={"user-description--goal-edit-btn--icon"}
-              alt=""
-            />
-          </button>
-        </div>
+      {state.goals.map((goal) => (
+          <Goal goal={goal}/>
+          // {/* <textarea style={{width:"100%"}} name="" id="" cols="30" rows="10"></textarea> */}
       ))}
     </div>
   );

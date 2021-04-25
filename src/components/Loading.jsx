@@ -1,10 +1,10 @@
 import React from "react";
-import "./loading.scss";
+import "./loading.css";
 
 export const Loading = () => {
   return (
-    <div className="login-container">
-      <h1 className="loading-text">Loading...</h1>
+    <div className="loading-container">
+      <div class="lds-dual-ring"></div>
     </div>
   );
 };
